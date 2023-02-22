@@ -1,0 +1,43 @@
+<mat-toolbar>
+  Angular Material Grid Example
+</mat-toolbar>
+    <div class="basic-container">
+
+      <mat-grid-list cols="3" rowHeight="261px" gutterSize="15px">
+        <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+          <div  class="padding-main">{{tile.text}}</div>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+    </div>
+
+
+      <mat-grid-list cols="3" rowHeight="261px" gutterSize="15px">
+        <mat-grid-tile [colspan]="2" [rowspan]="1" style="background-color:#142A5C;">
+          <div  class="padding-main">one</div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="2" style="background-color:#B7A0E8;">
+          <div  class="padding-main">one</div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="2" style="background-color:#FF0000;">
+          <div  class="padding-main">one</div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" style="background-color:#D9EDD9;">
+          <div  class="padding-main">one</div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="1" style="background-color:#D10DD9;">
+          <div  class="padding-main">one</div>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+
+
